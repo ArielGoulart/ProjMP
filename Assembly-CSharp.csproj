@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\player_move.cs" />
+    <Compile Include="Assets\Scripts\player_shot.cs" />
+    <Compile Include="Assets\Scripts\shot_behaviour.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/ariel/Desktop/Projetos/ProjMP/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
