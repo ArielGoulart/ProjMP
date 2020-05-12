@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\mine_behaviour.cs" />
+    <Compile Include="Assets\Scripts\player_controller.cs" />
     <Compile Include="Assets\Scripts\player_move.cs" />
     <Compile Include="Assets\Scripts\player_shot.cs" />
     <Compile Include="Assets\Scripts\shot_behaviour.cs" />

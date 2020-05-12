@@ -5,6 +5,7 @@ using UnityEngine;
 public class shot_behaviour : MonoBehaviour
 {
     public float speed;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class shot_behaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 0, speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.GetComponent<player_controller>().TakeDamage(damage);
     }
 }
