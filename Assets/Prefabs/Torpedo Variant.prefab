@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &568031868904273075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749387127634333145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b1f6146ac61e459da7de0dc81ca97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+--- !u!1001 &5749387127634299771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_Name
+      value: Torpedo Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.8845243
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0100193
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9551178d3a6c2e44eac7f9cbd8faf545, type: 3}
+--- !u!1 &5749387127634333145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 9551178d3a6c2e44eac7f9cbd8faf545,
+    type: 3}
+  m_PrefabInstance: {fileID: 5749387127634299771}
+  m_PrefabAsset: {fileID: 0}
