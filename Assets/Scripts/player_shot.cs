@@ -1,13 +1,18 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player_shot : MonoBehaviour
+namespace Photon.Shot
 {
-    public GameObject shot;
-    public GameObject mine;
-    public GameObject player;
-    
+
+public class player_shot : MonoBehaviourPun
+{
+    [SerializeField] private GameObject shot;
+    [SerializeField] private GameObject mine;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform aux_mine;
+    [SerializeField] private Transform aux_shot;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +22,29 @@ public class player_shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(photonView.IsMine)
         {
-            Instantiate(shot, player.transform.position, player.transform.rotation);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                    Fire();
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                    FireMine();
+               }
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+    }
+        [PunRPC]
+        private void Fire()
+         {
+            PhotonNetwork.Instantiate(shot.name, aux_shot.transform.position, player.transform.rotation);
+        }
+        [PunRPC]
+        private void FireMine()
         {
-            Instantiate(mine, player.transform.position, player.transform.rotation);
+            PhotonNetwork.Instantiate(mine.name, aux_mine.transform.position, player.transform.rotation);
         }
     }
 }

@@ -1,45 +1,85 @@
-﻿using System.Collections;
+﻿
+using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class player_move : MonoBehaviour
+
+namespace photon.movement
 {
-    public float speed;
-    public float turn_speed;
-   
 
-    void Start()
+    public class player_move : MonoBehaviourPun
     {
+        [SerializeField] private float speed;
+        [SerializeField] private float turn_speed;
+        [SerializeField] private float acceleration;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        void Update()
         {
-            transform.Translate(0, 0, speed * Time.deltaTime);
-            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (photonView.IsMine)
             {
-                transform.Rotate(Vector3.up,-turn_speed * Time.deltaTime);
-            }
-            if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
-            }
-        }
-        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(0, 0,-speed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                transform.Rotate(Vector3.up, -turn_speed * Time.deltaTime);
-            }
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    if (acceleration < speed)
+                    {
+                        acceleration += 0.1f;
+                    }
+                    transform.Translate(0, 0, acceleration * Time.deltaTime);
+                    if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                    {
+                        transform.Rotate(Vector3.up, -turn_speed * Time.deltaTime);
+                    }
+                    if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                    {
+                        transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
+                    }
+                }
+                else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    if (acceleration > -speed)
+                    {
+                        acceleration -= 0.1f;
+                    }
+                    transform.Translate(0, 0, acceleration * Time.deltaTime);
+                    if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                    {
+                        transform.Rotate(Vector3.up, -turn_speed * Time.deltaTime);
+                    }
+                    if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                    {
+                        transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
+                    }
+                }
+                else
+                {
+                    if (acceleration > 0)
+                    {
+                        acceleration -= 0.1f;
+                        transform.Translate(0, 0, acceleration * Time.deltaTime);
+                        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                        {
+                            transform.Rotate(Vector3.up, -turn_speed * Time.deltaTime);
+                        }
+                        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                        {
+                            transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
+                        }
+                    }
+                    if (acceleration < 0)
+                    {
+                        acceleration += 0.1f;
+                        transform.Translate(0, 0, acceleration * Time.deltaTime);
+                        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                        {
+                            transform.Rotate(Vector3.up, -turn_speed * Time.deltaTime);
+                        }
+                        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                        {
+                            transform.Rotate(Vector3.up, turn_speed * Time.deltaTime);
+                        }
+                    }
+                }
             }
         }
     }
