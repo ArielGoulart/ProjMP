@@ -36,12 +36,12 @@ public class player_shot : MonoBehaviourPun
         }
 
     }
-        [PunRPC]
+       
         private void Fire()
          {
             PhotonNetwork.Instantiate(shot.name, aux_shot.transform.position, player.transform.rotation);
         }
-        [PunRPC]
+      
         private void FireMine()
         {
             PhotonNetwork.Instantiate(mine.name, aux_mine.transform.position, player.transform.rotation);

@@ -72,10 +72,12 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\billboard.cs" />
     <Compile Include="Assets\Scripts\Main_Menu.cs" />
     <Compile Include="Assets\Scripts\mine_behaviour.cs" />
     <Compile Include="Assets\Scripts\player_controller.cs" />
     <Compile Include="Assets\Scripts\player_move.cs" />
+    <Compile Include="Assets\Scripts\player_nameTag.cs" />
     <Compile Include="Assets\Scripts\player_shot.cs" />
     <Compile Include="Assets\Scripts\PlayerNameInput.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />

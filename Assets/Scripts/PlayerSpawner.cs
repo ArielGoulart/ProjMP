@@ -15,7 +15,8 @@ public class PlayerSpawner : MonoBehaviour
 
         private void Start()
         {
-        var player = PhotonNetwork.Instantiate(playerPref.name , Vector3.zero, Quaternion.identity);
+            Vector3 position = new Vector3(Random.Range(-100f, 100f), 0, Random.Range(-100f, 100));
+        var player = PhotonNetwork.Instantiate(playerPref.name , position, Quaternion.identity);
             PlayerCamera.Follow = player.transform;
             PlayerCamera.LookAt = player.transform;
           
