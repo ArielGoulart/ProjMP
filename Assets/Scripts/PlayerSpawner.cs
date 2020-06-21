@@ -7,19 +7,36 @@ using UnityEngine;
 namespace Photon.SpawnPlayer
 {
 
-public class PlayerSpawner : MonoBehaviour
+public class PlayerSpawner : MonoBehaviourPun
 {
-
+        public static float teste;
+        public  float respawnTimer = 0f;
+       public GameObject[] points;
         [SerializeField] private GameObject playerPref = null;
         [SerializeField] private CinemachineFreeLook PlayerCamera = null;
 
         private void Start()
         {
-            Vector3 position = new Vector3(Random.Range(-100f, 100f), 0, Random.Range(-100f, 100));
-        var player = PhotonNetwork.Instantiate(playerPref.name , position, Quaternion.identity);
+            //GameObject spawn = points[Random.Range(0, points.Length)];
+            ////Vector3 position = spawn.transform.position;
+            //var player = PhotonNetwork.Instantiate(playerPref.name, spawn.transform.position, Quaternion.identity);
+            //PlayerCamera.Follow = player.transform;
+            //PlayerCamera.LookAt = player.transform;
+            Respawn();
+
+        }
+        private void Update()
+        {
+        }
+        
+        void  Respawn()
+        {
+
+            GameObject spawn = points[Random.Range(0, points.Length)];
+            //Vector3 position = spawn.transform.position;
+            var player = PhotonNetwork.Instantiate(playerPref.name, spawn.transform.position, Quaternion.identity);
             PlayerCamera.Follow = player.transform;
             PlayerCamera.LookAt = player.transform;
-          
         }
 }
 }

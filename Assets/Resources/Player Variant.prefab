@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.013814449, y: 0, z: 2.12}
+  m_LocalPosition: {x: -0.013814449, y: 0, z: 2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927722935517513755}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.013814449, y: 0, z: -2.65}
+  m_LocalPosition: {x: -0.013814449, y: 0, z: -2.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927722935517513755}
@@ -123,6 +123,8 @@ MonoBehaviour:
   player: {fileID: 1927722935517353019}
   aux_mine: {fileID: 420}
   aux_shot: {fileID: 427}
+  torpedo_shot: {fileID: 0}
+  deploy_mine: {fileID: 0}
 --- !u!114 &661
 MonoBehaviour:
   m_ObjectHideFlags: 0

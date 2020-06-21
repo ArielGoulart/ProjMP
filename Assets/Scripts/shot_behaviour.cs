@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class shot_behaviour : MonoBehaviour
+public class shot_behaviour : MonoBehaviourPun
 {
     public float speed;
     public float damage;
@@ -19,6 +20,16 @@ public class shot_behaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<player_controller>().TakeDamage(damage);
+        Dano(other);
+    }
+
+    [PunRPC]
+    public void Dano(Collider target)
+    {
+       
+        target.GetComponent<player_controller>().TakeDamage(damage);
+
+        Destroy(gameObject);
+
     }
 }
