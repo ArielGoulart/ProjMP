@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/DOMINIKCG/Desktop/multijogador/ProjMP/alpha 0.4.3a/ProjMP.exe
+C:/Users/ariel/Desktop/Projetos/build_projMP/ProjMP.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Arena01.unity
