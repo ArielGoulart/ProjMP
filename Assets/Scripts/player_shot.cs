@@ -36,7 +36,7 @@ namespace Photon.Shot
                 {
                     nextFire = Time.time + fireRate;
                     Fire();
-                    audioSource.PlayOneShot(torpedo_shot, 0.0f);
+                    audioSource.PlayOneShot(torpedo_shot, 1.0f);
 
                 }
 
@@ -44,7 +44,7 @@ namespace Photon.Shot
                 {
                     nextMine = Time.time + mineRate;
                     FireMine();
-                    audioSource.PlayOneShot(deploy_mine, 0.0f);
+                    audioSource.PlayOneShot(deploy_mine, 1.0f);
                 }
             }
 

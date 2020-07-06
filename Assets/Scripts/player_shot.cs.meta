@@ -3,7 +3,14 @@ guid: 0b5b0ba0d217ae3489da4b946166d6c5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - shot: {instanceID: 0}
+  - mine: {instanceID: 0}
+  - player: {instanceID: 0}
+  - aux_mine: {instanceID: 0}
+  - aux_shot: {instanceID: 0}
+  - torpedo_shot: {fileID: 8300000, guid: 4ea186a5a433b294588a9521d0184e79, type: 3}
+  - deploy_mine: {fileID: 8300000, guid: 85dc39bc7f2309a48a758a776aad7680, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
