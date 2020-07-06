@@ -123,8 +123,10 @@ MonoBehaviour:
   player: {fileID: 1927722935517353019}
   aux_mine: {fileID: 420}
   aux_shot: {fileID: 427}
-  torpedo_shot: {fileID: 0}
-  deploy_mine: {fileID: 0}
+  torpedo_shot: {fileID: 8300000, guid: 4ea186a5a433b294588a9521d0184e79, type: 3}
+  deploy_mine: {fileID: 8300000, guid: 85dc39bc7f2309a48a758a776aad7680, type: 3}
+  fireRate: 1
+  mineRate: 15
 --- !u!114 &661
 MonoBehaviour:
   m_ObjectHideFlags: 0

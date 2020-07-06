@@ -15,11 +15,16 @@ namespace Photon.Shot
         [SerializeField] private Transform aux_shot;
         public AudioClip torpedo_shot;
         public AudioClip deploy_mine;
+        public float fireRate;
+        private float nextFire;
+        public float mineRate;
+        private float nextMine;
+
         AudioSource audioSource;
         // Start is called before the first frame update
         void Start()
         {
-
+            audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -27,15 +32,17 @@ namespace Photon.Shot
         {
             if (photonView.IsMine)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
                 {
+                    nextFire = Time.time + fireRate;
                     Fire();
                     audioSource.PlayOneShot(torpedo_shot, 0.0f);
 
                 }
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && Time.time > nextMine)
                 {
+                    nextMine = Time.time + mineRate;
                     FireMine();
                     audioSource.PlayOneShot(deploy_mine, 0.0f);
                 }
