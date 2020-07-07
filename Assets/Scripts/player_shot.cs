@@ -24,6 +24,8 @@ namespace Photon.Shot
         // Start is called before the first frame update
         void Start()
         {
+            shot = new GameObject("shot");
+            mine = new GameObject("mine");
             audioSource = GetComponent<AudioSource>();
         }
 

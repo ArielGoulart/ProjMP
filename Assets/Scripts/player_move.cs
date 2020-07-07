@@ -17,6 +17,7 @@ namespace photon.movement
 
         void Update()
         {
+            
             if (photonView.IsMine)
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
